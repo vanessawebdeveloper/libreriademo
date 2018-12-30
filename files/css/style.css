@@ -1,0 +1,303 @@
+/* global */
+body, h2, h3, h5, p, a {
+    font-family: 'Lato', sans-serif;
+}
+
+.left {
+    float:left !important;
+}
+
+.right {
+    float:right !important;
+}
+
+/* header */
+.topbar-responsive {
+  background: #dedede;
+  padding: 1rem 1.5rem;
+}
+
+.topbar-responsive .topbar-responsive-logo {
+  color: #030000;
+  vertical-align: middle;
+  font-size:1.875em;
+}
+
+.topbar-responsive .menu {
+  background: #dedede;
+}
+
+.topbar-responsive .menu li:last-of-type {
+  margin-right: 0;
+}
+
+.topbar-responsive .menu a {
+  color: #030000;
+  transition: color 0.15s ease-in;
+}
+
+.topbar-responsive .menu a:hover {
+  color: #D70000;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive .menu a {
+    padding: 0.875rem 0;
+  }
+}
+
+.topbar-responsive .menu .topbar-responsive-button {
+  color: #030000;
+  border-color: #030000;
+  border-radius: 5000px;
+  transition: color 0.15s ease-in, border-color 0.15s ease-in;
+}
+
+.topbar-responsive .menu .topbar-responsive-button:hover {
+  color: #D70000;
+  border-color: #D70000;
+}
+
+
+
+/* only mobile */
+
+@media screen and (max-width: 39.9375em) {
+
+	.topbar-responsive .menu .topbar-responsive-button {
+		width: 100%;
+		margin: 0.875rem 0;
+	}
+
+	.menu-icon::after {
+    background:#030000;
+    -webkit-box-shadow: 0 7px 0  #030000,0 14px 0  #030000;
+    box-shadow: 0 7px 0  #030000,0 14px 0  #030000;
+}
+
+  .topbar-responsive {
+    padding: 0.75rem;
+  }
+  .topbar-responsive .top-bar-title {
+    position: relative;
+    width: 100%;
+  }
+  .topbar-responsive .top-bar-title span {
+    position: absolute;
+    right: 0;
+    border: 1px solid #030000;
+    border-radius: 5px;
+    padding: 0.25rem 0.45rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .topbar-responsive .top-bar-title span .menu-icon {
+    margin-bottom: 4px;
+  }
+}
+
+/* animazione mobile */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive-links {
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    width: 100%;
+    -webkit-animation: fadeIn 1s ease-in;
+            animation: fadeIn 1s ease-in;
+  }
+}
+
+/* Benvenuto */
+
+.welcome-section {
+  background: url("/libreria/images/background-libreria.jpg") 50% no-repeat;
+  background-size: cover;
+  min-height:25em;
+  margin-bottom:2%;
+  height:auto;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.welcome-section .welcome-section-text {
+  color: #ffffff;
+}
+
+.button-rounded-hover {
+  border: 0;
+  border-radius: 5000px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background:#DEDEDE;
+  color:#030000;
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #dedede;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #ffffff;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: #030000;
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 0.25;
+}
+
+/* elenco libri */
+.elenco-libri {
+  padding:2% 0px 2% 0px;
+}
+
+
+.book-table {
+  background-color: #fefefe;
+  border: solid 1px #cacaca;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+}
+
+.book-table li {
+  border-bottom: dotted 1px #cacaca;
+  padding: 0.875rem 1.125rem;
+}
+
+.book-table li:last-child {
+  border-bottom: 0;
+}
+
+.book-table .title {
+  background-color: #030000;
+  color: #fefefe;
+  border-bottom: 0;
+}
+
+.book-table .book {
+  background-color: #e6e6e6;
+  font-size: 2rem;
+  border-bottom: 0;
+}
+
+.book-table em {
+  color: #8a8a8a;
+}
+
+
+.book-table :last-child {
+  margin-bottom: 0;
+}
+
+/* gestione libri */
+
+.gestionelibri {
+  background: #dedede;
+  padding: 2% 0px 2% 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
+
+.gestionelibri .button {
+  background:#000000;
+  color:#ffffff;
+}
+
+
+
+/* footer */
+footer {
+      background: #030000;
+      text-align:center;
+      color:#ffffff;
+}
